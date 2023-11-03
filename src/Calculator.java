@@ -25,7 +25,7 @@ public class Calculator {
         romaAndArabic.put(5, "V");
         romaAndArabic.put(6, "VI");
         romaAndArabic.put(7, "VII");
-        romaAndArabic.put(8, "IIX");
+        romaAndArabic.put(8, "VIII");
         romaAndArabic.put(9, "IX");
         romaAndArabic.put(10, "X");
         romaAndArabic.put(50, "L");
@@ -76,10 +76,11 @@ public class Calculator {
             result = Integer.parseInt(numbers[0]) - Integer.parseInt(numbers[2]);
             System.out.println("Result is: " + result);
         }
-        else if (numbers[1].equals("/") || Integer.parseInt(numbers[2]) != 0) {
+        else if (numbers[1].equals("/") && Integer.parseInt(numbers[2]) != 0) {
             result = Integer.parseInt(numbers[0]) / Integer.parseInt(numbers[2]);
             System.out.println("Result is: " + result);
-        } else  {throw new TaskException();}
+        }
+        else  {throw new TaskException();}
 
 
     }
